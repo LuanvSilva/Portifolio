@@ -33,10 +33,9 @@ const portfolioData = {
   ],
   certifications: [
     { title: "Desenvolvimento Java com Cloud", issuer: "Santander", year: 2024 },
-    { title: "AWS - Fundamentos para Desenvolvedores", issuer: "AWS Training", year: 2024 },
     { title: "Backend com Java", issuer: "Santander Bootcamp", year: 2024 },
     { title: "Node.js do Zero à Maestria com Projetos", issuer: "Udemy", year: 2023 },
-    { title: "Introdução à Análise Macroeconômica", issuer: "ANBIMA", year: 2022 },
+    { title: "Introdução à Análise Macroeconômica", issuer: "Coursera", year: 2021 },
   ],
  
   projects: [
@@ -50,15 +49,15 @@ const portfolioData = {
     {
       title: "Sistema web completo para gerenciamento de Serviços",
       description: "Aplicação web para gerenciamento interno de tarefas e projetos, utilizando arquitetura de microsserviços.",
-      tags: ["Node.js", "JavaScript", "HTML", "JWT", "Docker", "CSS"],
-      githubLink: "#",
-      deployLink: "#",
+      tags: ["Node.js", "JavaScript", "HTML5", "JWT", "Docker", "CSS3", "Jest"],
+      githubLink: "https://github.com/LuanvSilva/Services",
+      deployLink: null,  
     },
     {
-      title: "Seu Próximo Projeto",
-      description: "Este é um card modelo. Edite o array 'projects' no código para adicionar seus próprios projetos e mostrar seu trabalho.",
-      tags: ["React", "TailwindCSS", "Framer Motion"],
-      githubLink: "#",
+      title: "CarWash API é um sistema de back-end para gerenciamento de Serviços",
+      description: "Este projeto foi criado para centralizar e otimizar a gestão de serviços",
+      tags: ["Java 22", "Spring Boot", "PostgreSQL", "Docker"],
+      githubLink: "https://github.com/LuanvSilva/back-end-carwash",
       deployLink: null,
     },
   ]
