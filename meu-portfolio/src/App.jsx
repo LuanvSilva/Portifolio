@@ -210,15 +210,14 @@ const About = () => (
         <p className="text-slate-300 text-lg leading-relaxed mb-6">
           {portfolioData.about}
         </p>
-        <a href="/src/docs/LuanCv.pdf" download className="inline-flex items-center gap-2 bg-cyan-500 text-white font-bold py-3 px-6 rounded-lg hover:bg-cyan-600 transition-colors">
+        <a href="/docs/LuanCv.pdf" download className="inline-flex items-center gap-2 bg-cyan-500 text-white font-bold py-3 px-6 rounded-lg hover:bg-cyan-600 transition-colors">
           <Download size={20} />
           Download CV
         </a>
       </div>
       <div className="md:col-span-2 flex justify-center">
-        <div className="w-64 h-64 rounded-full bg-slate-700 border-4 border-cyan-400 shadow-lg shadow-cyan-500/20 flex items-center justify-center">
-            <img src="/src/docs/Luan.jpg" alt="Luan Silva" className="rounded-full" />
-            <User size={120} className="text-slate-500"/>
+        <div className="w-64 h-64 rounded-full bg-slate-700 border-4 border-cyan-400 shadow-lg shadow-cyan-500/20 flex items-center justify-center overflow-hidden">
+            <img src="/docs/Luan.jpg" alt="Luan Silva" className="rounded-full w-full h-full object-cover" />
         </div>
       </div>
     </div>
