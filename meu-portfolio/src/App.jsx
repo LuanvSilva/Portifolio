@@ -3,26 +3,25 @@ import { BarChart, Bar, XAxis, YAxis, Tooltip, Legend, ResponsiveContainer, Rada
 import { motion, AnimatePresence } from 'framer-motion';
 import { Github, Linkedin, Mail, Smartphone, Award, Briefcase, User, Lightbulb, Code, Server, Database, GitBranch, Download } from 'lucide-react';
 
-// DADOS DO PORTFÓLIO - Fácil de editar
 const portfolioData = {
   name: "Luan Vitorio Da Silva",
-  title: "Desenvolvedor Backend Java | Full Stack",
-  about: "Desenvolvedor Full Stack com foco em Java e Node.js, com experiência em arquiteturas baseadas em microsserviços, APIs REST, mensageria e cloud. Pós-graduando em Desenvolvimento Full Stack e graduando em Análise e Desenvolvimento de Sistemas. Atuo em projetos que envolvem desenvolvimento backend com Java 8+ e Spring Boot, além da criação e integração de APIs RESTful, testes automatizados (Mockito, Jest), versionamento com Git e deploy com Docker/Kubernetes.",
+  title: "Desenvolvedor Full Stack | Backend Java e Node.js",
+  about: "Desenvolvedor Full Stack com foco em Java e Node.js, com experiência em arquiteturas baseadas em microsserviços, APIs REST, mensageria e cloud. Graduando em Análise e Desenvolvimento de Sistemas. Atuo em projetos que envolvem desenvolvimento backend com Java 8+ e Spring Boot, além da criação e integração de APIs RESTful, testes automatizados (Mockito, Jest), versionamento com Git e deploy com Docker/Kubernetes.",
   objective: "Busco oportunidades como Desenvolvedor Backend Java ou Full Stack, em empresas que ofereçam ambiente colaborativo, plano de carreira e foco em inovação. Tenho como meta aplicar meus conhecimentos técnicos para criar soluções robustas e escaláveis, contribuindo diretamente com o crescimento da organização.",
   contact: {
     email: "contato.luandeveloper@gmail.com",
     phone: "(41) 98422-1038",
     linkedin: "https://www.linkedin.com/in/luan-vitorio-da-silva-66a820245/",
-    github: "https://github.com/LuanvSilva", // Adicione seu link do github aqui
+    github: "https://github.com/LuanvSilva",
   },
   skills: [
-    { name: 'Java 8+', level: 85, type: 'Backend' },
+    { name: 'Java 8+', level: 90, type: 'Backend' },
     { name: 'Spring Boot', level: 85, type: 'Backend' },
-    { name: 'Node.js', level: 85, type: 'Backend' },
+    { name: 'Node.js', level: 90, type: 'Backend' },
     { name: 'Microsserviços', level: 80, type: 'Arquitetura' },
     { name: 'APIs RESTful', level: 95, type: 'Backend' },
     { name: 'React', level: 65, type: 'Frontend' },
-    { name: 'JavaScript', level: 85, type: 'Frontend' },
+    { name: 'JavaScript', level: 90, type: 'Frontend' },
     { name: 'HTML/CSS', level: 85, type: 'Frontend' },
     { name: 'MySQL/PostgreSQL', level: 85, type: 'Banco de Dados' },
     { name: 'MongoDB', level: 70, type: 'Banco de Dados' },
@@ -39,19 +38,19 @@ const portfolioData = {
     { title: "Node.js do Zero à Maestria com Projetos", issuer: "Udemy", year: 2023 },
     { title: "Introdução à Análise Macroeconômica", issuer: "ANBIMA", year: 2022 },
   ],
-  // PREENCHA COM SEUS PROJETOS
+ 
   projects: [
     {
-      title: "API de E-commerce",
-      description: "Desenvolvimento de uma API RESTful completa para uma plataforma de e-commerce, com gerenciamento de produtos, usuários e pedidos.",
-      tags: ["Java", "Spring Boot", "MySQL", "Docker"],
-      githubLink: "#",
+      title: "API de geração de planos nutricionais e de treinamento personalizados",
+      description: "Sistema inteligente para geração de planos nutricionais e de treinamento personalizados, utilizando Retrieval-Augmented Generation (RAG) e IA",
+      tags: ["Python","Docker", "PostgreSQL", "RAG", "Gemini", "Redis"],
+      githubLink: "https://github.com/LuanvSilva/NutriMaxIA",
       deployLink: null,
     },
     {
-      title: "Sistema de Gerenciamento",
+      title: "Sistema web completo para gerenciamento de Serviços",
       description: "Aplicação web para gerenciamento interno de tarefas e projetos, utilizando arquitetura de microsserviços.",
-      tags: ["Node.js", "React", "MongoDB", "JWT"],
+      tags: ["Node.js", "JavaScript", "HTML", "JWT", "Docker", "CSS"],
       githubLink: "#",
       deployLink: "#",
     },
@@ -65,7 +64,7 @@ const portfolioData = {
   ]
 };
 
-// Componente de Animação para Seções
+
 const SectionWrapper = ({ children, id, className = '' }) => (
   <motion.section
     id={id}
@@ -79,7 +78,7 @@ const SectionWrapper = ({ children, id, className = '' }) => (
   </motion.section>
 );
 
-// Componente de Título de Seção
+
 const SectionTitle = ({ icon: Icon, children }) => (
   <h2 className="text-3xl md:text-4xl font-bold text-slate-100 mb-12 flex items-center justify-center gap-3">
     <Icon className="text-cyan-400" size={36} />
@@ -87,7 +86,6 @@ const SectionTitle = ({ icon: Icon, children }) => (
   </h2>
 );
 
-// --- COMPONENTES PRINCIPAIS ---
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -104,7 +102,7 @@ const Header = () => {
       <div className="max-w-6xl mx-auto px-4">
         <div className="flex justify-between items-center h-20">
           <a href="#" className="text-2xl font-bold text-cyan-400 hover:text-cyan-300 transition-colors">
-            LV.dev
+            Desenvolvedor Full Stack
           </a>
           <nav className="hidden md:flex items-center gap-6">
             {navLinks.map(link => (
@@ -140,7 +138,7 @@ const Header = () => {
 
 const Hero = () => {
   const [subtitleIndex, setSubtitleIndex] = useState(0);
-  const subtitles = ["Desenvolvedor Backend Java", "Desenvolvedor Full Stack", "Apaixonado por Soluções Escaláveis"];
+  const subtitles = ["Desenvolvedor Full Stack", "Desenvolvedor Backend Java e Node.js", "Apaixonado por Soluções Escaláveis"];
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -213,14 +211,14 @@ const About = () => (
         <p className="text-slate-300 text-lg leading-relaxed mb-6">
           {portfolioData.about}
         </p>
-        <a href="/path-to-your-cv.pdf" download className="inline-flex items-center gap-2 bg-cyan-500 text-white font-bold py-3 px-6 rounded-lg hover:bg-cyan-600 transition-colors">
+        <a href="/src/docs/LuanCv.pdf" download className="inline-flex items-center gap-2 bg-cyan-500 text-white font-bold py-3 px-6 rounded-lg hover:bg-cyan-600 transition-colors">
           <Download size={20} />
           Download CV
         </a>
       </div>
       <div className="md:col-span-2 flex justify-center">
         <div className="w-64 h-64 rounded-full bg-slate-700 border-4 border-cyan-400 shadow-lg shadow-cyan-500/20 flex items-center justify-center">
-            {/* Você pode adicionar uma foto aqui */}
+            <img src="/src/docs/Luan.jpg" alt="Luan Silva" className="rounded-full" />
             <User size={120} className="text-slate-500"/>
         </div>
       </div>
@@ -243,7 +241,7 @@ const Skills = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 1500); // Simula o carregamento
+    const timer = setTimeout(() => setLoading(false), 1500); 
     return () => clearTimeout(timer);
   }, []);
   
@@ -401,7 +399,7 @@ const Contact = () => (
 const Footer = () => (
     <footer className="bg-slate-900 text-center py-6 border-t border-slate-800">
         <p className="text-slate-500">
-            &copy; {new Date().getFullYear()} {portfolioData.name}. Desenvolvido com React e ❤️.
+            &copy; {new Date().getFullYear()} {portfolioData.name}. Desenvolvido com por Luan Silva.
         </p>
     </footer>
 );
