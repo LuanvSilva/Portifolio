@@ -32,6 +32,7 @@ const portfolioData = {
     { name: 'Jest', level: 85, type: 'Testes' },
   ],
   certifications: [
+    { title: "Análise e Desenvolvimento de Sistemas", issuer: "Universidade Cesumar", year: 2024 },
     { title: "Desenvolvimento Java com Cloud", issuer: "Santander", year: 2024 },
     { title: "Backend com Java", issuer: "Santander Bootcamp", year: 2024 },
     { title: "Node.js do Zero à Maestria com Projetos", issuer: "Udemy", year: 2023 },
@@ -397,7 +398,7 @@ const Contact = () => (
 const Footer = () => (
     <footer className="bg-slate-900 text-center py-6 border-t border-slate-800">
         <p className="text-slate-500">
-            &copy; {new Date().getFullYear()} {portfolioData.name}. Desenvolvido com por Luan Silva.
+            &copy; {new Date().getFullYear()} {portfolioData.name}. Todos os direitos reservados.
         </p>
     </footer>
 );
