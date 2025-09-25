@@ -6,8 +6,8 @@ import { Github, Linkedin, Mail, Smartphone, Award, Briefcase, User, Lightbulb, 
 const portfolioData = {
   name: "Luan Vitorio Da Silva",
   title: "Desenvolvedor Full Stack | Backend Java e Node.js",
-  about: "Desenvolvedor Full Stack com foco em Java e Node.js, com experiência em arquiteturas baseadas em microsserviços, APIs REST, mensageria e cloud. Graduando em Análise e Desenvolvimento de Sistemas. Atuo em projetos que envolvem desenvolvimento backend com Java 8+ e Spring Boot, além da criação e integração de APIs RESTful, testes automatizados (Mockito, Jest), versionamento com Git e deploy com Docker/Kubernetes.",
-  objective: "Busco oportunidades como Desenvolvedor Backend Java ou Full Stack, em empresas que ofereçam ambiente colaborativo, plano de carreira e foco em inovação. Tenho como meta aplicar meus conhecimentos técnicos para criar soluções robustas e escaláveis, contribuindo diretamente com o crescimento da organização.",
+  about: " Sou Desenvolvedor Full Stack com foco em Java e Node.js, atuando em arquiteturas baseadas em microsserviços, APIs REST e SOAP, mensageria e cloud. Mais do que a experiência técnica, destaco meu esforço constante e vontade de aprender coisas novas. Já ampliei meus conhecimentos em Docker, Kubernetes e integrações com sistemas legados, e estou sempre em busca de aprimorar minhas habilidades e explorar novas tecnologias. Meu objetivo é integrar times que valorizem qualidade, aprendizado contínuo e inovação, contribuindo em projetos desafiadores e colaborando para entregas de impacto em escala.",
+  objective: "Busco oportunidades como Desenvolvedor Backend Java ou Full Stack, em empresas que valorizem colaboração, inovação e aprendizado contínuo. Tenho como meta contribuir com meu comprometimento, dedicação e vontade de aprender, entregando soluções que tragam valor real para o negócio. Desejo atuar em um ambiente que incentive o crescimento profissional, a troca de conhecimento e a aplicação de boas práticas de engenharia de software, sempre com foco em qualidade e melhoria constante.",
   contact: {
     email: "contato.luandeveloper@gmail.com",
     phone: "(41) 98422-1038",
@@ -25,9 +25,11 @@ const portfolioData = {
     { name: 'HTML/CSS', level: 85, type: 'Frontend' },
     { name: 'MySQL/PostgreSQL', level: 85, type: 'Banco de Dados' },
     { name: 'MongoDB', level: 70, type: 'Banco de Dados' },
+    { name: 'Redis', level: 70, type: 'Banco de Dados' },
     { name: 'Git & Git Flow', level: 90, type: 'Ferramentas' },
     { name: 'Docker', level: 70, type: 'DevOps' },
     { name: 'Kubernetes', level: 50, type: 'DevOps' },
+    { name: 'Jenkins', level: 50, type: 'DevOps' },
     { name: 'JUnit/Mockito', level: 70, type: 'Testes' },
     { name: 'Jest', level: 85, type: 'Testes' },
   ],
@@ -278,7 +280,7 @@ const Skills = () => {
             <ResponsiveContainer width="100%" height="100%">
                 <BarChart data={portfolioData.skills} layout="vertical" margin={{ top: 5, right: 20, left: 80, bottom: 5 }}>
                     <XAxis type="number" hide />
-                    <YAxis type="category" dataKey="name" width={100} tick={{ fill: '#cbd5e1' }} tickLine={false} axisLine={false} />
+                    <YAxis type="category" dataKey="name" width={100} tick={{ fill: '#cbd5e1' }} tickLine={false} axisLine={true} />
                     <Tooltip cursor={{fill: 'rgba(71, 85, 105, 0.5)'}} contentStyle={{ backgroundColor: '#1e293b', border: '1px solid #334155' }} />
                     <Legend />
                     <Bar dataKey="level" fill="#22d3ee" background={{ fill: '#334155' }} barSize={15} />
